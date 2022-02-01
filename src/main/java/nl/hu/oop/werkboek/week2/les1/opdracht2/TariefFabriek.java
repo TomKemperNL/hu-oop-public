@@ -4,15 +4,12 @@ public class TariefFabriek {
     public static void main(String[] args) {
         BelastingTarieven tariefGenerator = new BelastingTarieven();
 
-        int tarieven = 0;
-        while (tarieven < 10) {
+        while (true) {
             try {
-                System.out.printf("%d: ", tarieven);
                 tariefGenerator.produceerBelastingTarieven();
-                tarieven++;
+                break;
             } catch (ArithmeticException ex) {
                 System.out.println("mislukt");
-                tarieven = 0;
             }
         }
     }
