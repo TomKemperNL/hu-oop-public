@@ -22,12 +22,12 @@ public class Huisdier {
 
     public String toString() {
         String regel1 = naam + ", de " + ras + ", weegt " + gewicht + " kg.";
-        String regel2;
+        String regel2 = "En de eigenaar is: ";
 
         if (this.baasje == null) {
-            regel2 = "En de eigenaar is: null";
+            regel2 = regel2 + "null";
         } else {
-            regel2 = "En de eigenaar is: " + this.baasje.toString();
+            regel2 = regel2 + this.baasje.toString();
         }
 
         return regel1 + "\n" + regel2;
