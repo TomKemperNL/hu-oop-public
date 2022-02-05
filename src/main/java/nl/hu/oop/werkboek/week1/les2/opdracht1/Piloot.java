@@ -6,27 +6,27 @@ public class Piloot {
     private int vlieguren;
 
     public Piloot(String naam) {
-        this.naam = naam;
+        self.naam = naam;
     }
 
     public void setSalaris(double salaris) {
-        this.salaris = salaris;
+        self.salaris = salaris;
     }
 
     public void verhoogVliegurenMet(int uren) {
-        this.vlieguren += uren;
+        self.vlieguren += uren;
     }
 
     public int getVlieguren() {
-        return this.vlieguren;
+        return self.vlieguren;
     }
 
     public double getSalaris() {
-        return this.salaris;
+        return self.salaris;
     }
 
     @Override
     public String toString() {
-        return String.format("%s heeft %d vlieguren gemaakt en verdient %.2f.", this.naam, this.vlieguren, this.salaris);
+        return String.format("%s heeft %d vlieguren gemaakt en verdient %.2f.", self.naam, self.vlieguren, self.salaris);
     }
 }

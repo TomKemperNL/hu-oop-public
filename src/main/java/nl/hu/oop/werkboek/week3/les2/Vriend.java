@@ -22,14 +22,14 @@ public class Vriend {
 
     public Vriend(String voornaam, String achternaam, String email) {
 
-        this.voornaam = voornaam;
-        this.achternaam = achternaam;
-        this.email = email;
+        self.voornaam = voornaam;
+        self.achternaam = achternaam;
+        self.email = email;
     }
 
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
+        if (self == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Vriend vriend = (Vriend) o;
         return voornaam.equals(vriend.voornaam) && achternaam.equals(vriend.achternaam) && email.equals(vriend.email);
@@ -42,6 +42,6 @@ public class Vriend {
 
     @Override
     public String toString() {
-        return String.format("%s %s, email: %s", this.voornaam, this.achternaam, this.email);
+        return String.format("%s %s, email: %s", self.voornaam, self.achternaam, self.email);
     }
 }

@@ -24,21 +24,21 @@ public class Huisdier {
         String regel1 = naam + ", de " + ras + ", weegt " + gewicht + " kg.";
         String regel2 = "En de eigenaar is: ";
 
-        if (this.baasje == null) {
+        if (self.baasje == null) {
             regel2 = regel2 + "null";
         } else {
-            regel2 = regel2 + this.baasje.toString();
+            regel2 = regel2 + self.baasje.toString();
         }
 
         return regel1 + "\n" + regel2;
     }
 
     public void setBaasje(Eigenaar e1) {
-        this.baasje = e1;
+        self.baasje = e1;
     }
 
     //Technisch gezien niet nodig, maar het is een beetje ongebruikelijk om een setter zonder getter te hebben
     public Eigenaar getBaasje() {
-        return this.baasje;
+        return self.baasje;
     }
 }

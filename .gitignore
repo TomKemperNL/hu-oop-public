@@ -4,3 +4,4 @@ target
 obj
 bin
 node_modules
+venv
