@@ -23,18 +23,18 @@ public class Eigenaar {
 
     public String toString() {
         String basis = naam + " heeft giro " + giroNr + ". En is het baasje van ";
-        if (self.beestje == null) {
+        if (this.beestje == null) {
             return basis + "null";
         } else {
-            return basis + self.beestje.toString();
+            return basis + this.beestje.toString();
         }
     }
 
     public void setBeestje(Huisdier huisdier) {
-        self.beestje = huisdier;
+        this.beestje = huisdier;
     }
 
     public Huisdier getBeestje() {
-        return self.beestje;
+        return this.beestje;
     }
 }

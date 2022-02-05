@@ -19,7 +19,7 @@ public class Student {
     }
 
     public String toString() {
-        return "Deze student heet " + naam + " en heeft nummer " + self.studentnr;
+        return "Deze student heet " + naam + " en heeft nummer " + this.studentnr;
     }
 
     public int getStudentNummer() {

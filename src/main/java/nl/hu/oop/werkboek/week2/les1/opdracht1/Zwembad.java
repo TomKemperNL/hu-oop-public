@@ -6,10 +6,10 @@ public class Zwembad {
     private double diepte;
 
     public Zwembad(double breedte, double lengte, double diepte) {
-        self();
-        self.breedte = breedte;
-        self.lengte = lengte;
-        self.diepte = diepte;
+        this();
+        this.breedte = breedte;
+        this.lengte = lengte;
+        this.diepte = diepte;
 
     }
 
@@ -18,36 +18,36 @@ public class Zwembad {
     }
 
     public double getBreedte() {
-        return self.breedte;
+        return this.breedte;
     }
 
     public double getLengte() {
-        return self.lengte;
+        return this.lengte;
     }
 
     public double getDiepte() {
-        return self.diepte;
+        return this.diepte;
     }
 
     public double inhoud() {
-        return self.diepte * self.lengte * self.breedte;
+        return this.diepte * this.lengte * this.breedte;
     }
 
     public void setBreedte(double b) {
-        self.breedte = b;
+        this.breedte = b;
     }
 
     public void setLengte(double l) {
-        self.lengte = l;
+        this.lengte = l;
     }
 
     public void setDiepte(double d) {
-        self.diepte = d;
+        this.diepte = d;
     }
 
     @Override
     public String toString() {
-        return "Dit zwembad is " + self.breedte + " meter breed, " + self.lengte + " meter lang, en " + self.diepte + " meter diep";
-        //return String.format("Dit zwembad is %.1f meter breed, %.1f meter lang, en %.1f meter diep", self.breedte, self.lengte, self.diepte);
+        return "Dit zwembad is " + this.breedte + " meter breed, " + this.lengte + " meter lang, en " + this.diepte + " meter diep";
+        //return String.format("Dit zwembad is %.1f meter breed, %.1f meter lang, en %.1f meter diep", this.breedte, this.lengte, this.diepte);
     }
 }
