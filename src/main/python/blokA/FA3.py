@@ -73,6 +73,25 @@ def nieuwe_kluis():
         return -2
 
 
+class Kluis:
+    def __init__(self, nr, wachtwoord):
+        self.nr = nr
+        self.wachtwoord = wachtwoord
+
+
+def lees_kluizen(file):
+    kluizen_informatie = open(file, 'r')
+    tekst = kluizen_informatie.readlines()
+    kluizen_informatie.close()
+
+    kluisjes = []
+    for regel in tekst:
+        delen = regel.strip().split(';')
+        nummer = int(delen[0])
+        ww = delen[1]
+        kluisjes.append(Kluis(nummer, ww))
+    return kluisjes
+
 def kluis_openen():
     """
     Laat de gebruiker een kluisnummer invoeren, en direct daarna de bijbehorende
@@ -81,15 +100,15 @@ def kluis_openen():
     Returns:
         bool: True als de ingevoerde combinatie correct is, anders False
     """
-    kluizen_informatie = open('fa_testkluizen.txt', 'r')
-    tekst = kluizen_informatie.readlines()
-    kluis_nummer = str(input('Wat is je kluisnummer: '))
-    kluis_code = str(input('Wat is je wachtwoord: '))
-    combinatie = (kluis_nummer + ';' + kluis_code + '\n')
-    if combinatie not in tekst:
-        return False
-    if combinatie in tekst:
-        return True
+    kluizen = lees_kluizen('fa_testkluizen.txt')
+    kluis_nummer = int(input('Wat is je kluisnummer: '))
+
+    for kluis in kluizen:
+        if kluis.nr == kluis_nummer:
+            kluis_code = input('Wat is je wachtwoord: ')
+            return kluis_code == kluis.wachtwoord
+
+    return False
 
 
 def development_code():
