@@ -43,20 +43,16 @@ public class Persoon {
     }
 
     public String toString(){
-        if(huisdier == null){
-            if(lengte > 2.0){
-                return "Lange " + this.naam;
-            }else{
-                return this.naam;
-            }
-        }else{
-            if(lengte > 2.0){
-                return "Lange " + this.naam + " met " + huisdier.toString();
-            }else{
-                return this.naam + " met " + huisdier.toString();
-            }
+        String resultaat = this.naam;
+
+        if(lengte > 2.0){
+            resultaat = "Lange " + resultaat;
         }
 
+        if(huisdier != null){
+            resultaat = resultaat + " met " + huisdier.toString();
+        }
 
+        return resultaat;
     }
 }
