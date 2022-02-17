@@ -13,6 +13,10 @@ public class Persoon {
 
     public void setHuisdier(Dier husdier){
         this.huisdier = husdier;
+
+        if(husdier.getEigenaar() != this){
+            husdier.setEigenaar(this);
+        }
     }
 
     public Persoon(String nm, char geslcht){
