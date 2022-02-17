@@ -107,7 +107,7 @@ def kluis_openen():
         if kluis.nr == kluis_nummer:
             kluis_code = input('Wat is je wachtwoord: ')
             return kluis_code == kluis.wachtwoord
-
+    
     return False
 
 
