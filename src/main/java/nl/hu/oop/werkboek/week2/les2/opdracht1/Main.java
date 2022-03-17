@@ -1,17 +1,32 @@
 package nl.hu.oop.werkboek.week2.les2.opdracht1;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] arg) {
-        Huisdier hd1 = new Huisdier("Nero", "Dobermann");
-        Eigenaar e1 = new Eigenaar("Willem de Moller");
-        System.out.println(hd1);
-        hd1.setBaasje(e1);
-        System.out.println(hd1);
-        System.out.println();
-        Huisdier hd2 = new Huisdier("Zaza", "kakkerlak");
-        Eigenaar e2 = new Eigenaar("Pluk");
-        System.out.println(hd2);
-        hd2.setBaasje(e2);
-        System.out.println(hd2);
-    }
+        Eigenaar p1 = new Eigenaar("Tom");
+        Eigenaar p2 = new Eigenaar("Leo");
+        Huisdier h = new Huisdier("Todor", "kat");
+        Huisdier h2 = new Huisdier("Roderick", "kat");
+        Huisdier h3 = new Huisdier("Zucco", "rat");
+        p1.voegHuisdierToe(h);
+
+        p1.getHuisdieren().add(h2);
+        p1.getHuisdieren().add(h3);
+
+
+        ArrayList<Eigenaar> personen = new ArrayList<>();
+        personen.add(p1);
+        personen.add(p2);
+
+
+        for(Eigenaar persoon: personen){
+            System.out.println(persoon.getNaam());
+            for(Huisdier dier: persoon.getHuisdieren()){
+                System.out.println(dier.getNaam());
+            }
+        }
+     }
 }
+
